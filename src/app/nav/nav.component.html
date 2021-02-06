@@ -1,0 +1,33 @@
+<div>Inside COmponent</div>
+<h1>Welcome to my Component</h1>
+
+
+{{ name | uppercase }} 
+
+<br />
+
+{{ 2 + 2 }} <br />
+
+<br />
+<br />
+
+
+<!--One way binding-->
+<input [placeholder] = 'place' />
+
+<!--two way data binding-->
+<input placeholder="type..." [(ngModel)] = "name" />
+
+{{name}}
+
+
+<!--Event Binding-->
+<button (click) = "showData()" >Click </button> 
+<!--ngModel-->
+
+<!--
+
+    [(ngModel)]
+FormsModule
+
+-->

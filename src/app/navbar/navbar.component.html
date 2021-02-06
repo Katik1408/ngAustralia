@@ -1,0 +1,52 @@
+<!--
+
+    Reactive forms are Synchronous
+    Template driven forms are Async
+-->
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+  <div class="container">
+    <div class="card spacer">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="emailid"> Email id</label>
+        </div>
+        <div class="col-md-6">
+          <input
+            type="email"
+            formControlName="emailid"
+            id="emailid"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row rowSpacer">
+        <div class="col-md-6">
+          <label for="pwd"> Password</label>
+        </div>
+        <div class="col-md-6">
+          <input
+            type="password"
+            formControlName="password"
+            id="pwd"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" class="btn btn-primary" value="Submit"  />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!--
+
+    ReactiveForm
+
+FormGroup -> It is used to track the values of entire form
+FormControl -> It is used to track the values for individual Controls
+
+-->
