@@ -1,1 +1,77 @@
-<p>category works!</p>
+<!--
+
+    Reactive forms are Synchronous
+    Template driven forms are Async
+-->
+
+<!--
+    Template Variable
+    We have to use '#'
+    [fromGroup] = "loginForm"
+-->
+
+
+
+<form #loginForm="ngForm"  (ngSubmit)="onSubmit(loginForm)">
+    <div class="container">
+      <div class="card spacer">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="emailid"> Email id</label>
+          </div>
+          <div class="col-md-6">
+            <input 
+              type="email"
+              #emailid = "ngModel"
+              [(ngModel)] = "loginModel.emailid"
+              id="emailid"
+              name="emailid"
+              class="form-control"
+             
+            />
+          </div>
+        </div>
+        <div class="row rowSpacer">
+          <div class="col-md-6">
+            <label for="pwd"> Password</label>
+          </div>
+          <div class="col-md-6">
+            <input
+              type="password"
+              #password = "ngModel"
+              [(ngModel)]="loginModel.password"
+              id="pwd"
+              name="password"
+              class="form-control"
+              
+            />
+            <!-- <div class="invalid-feedback" *ngIf="f.password.errors.required">
+              Password is required
+            </div> -->
+            
+            <!--
+  
+                *ngIf
+                *ngFor
+  
+            -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+  <!--
+  
+      ReactiveForm
+  
+  FormGroup -> It is used to track the values of entire form
+  FormControl -> It is used to track the values for individual Controls
+  
+  -->
+  

@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {LoginModel} from '../../models/login.model'
 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
-export class CategoryComponent implements OnInit {
+export class CategoryComponent {
 
-  constructor() { }
+  loginModel = new LoginModel();
 
-  ngOnInit(): void {
+  // constructor(private login: LoginModel){
+  //   this.loginModel  = login;
+  // }
+
+
+  onSubmit(data){
+    console.log(data)
   }
 
 }
