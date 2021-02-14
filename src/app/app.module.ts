@@ -7,14 +7,21 @@ import {NavComponent} from '../app/nav/nav.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CategoryComponent } from './category/category.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {HighlightDirective} from './custom-directives/highlight-directive';
+import { CustomifDirective } from './custom-directives/customif/customif.directive';
+import { PipesexampleComponent } from './pipesexample/pipesexample.component';
+import {MultiplerPipe} from './pipes/multiplier.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     NavbarComponent,
-    CategoryComponent
+    CategoryComponent,
+    HighlightDirective,
+    CustomifDirective,
+    PipesexampleComponent,
+    MultiplerPipe
   ],
   imports: [
     BrowserModule,

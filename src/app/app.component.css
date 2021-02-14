@@ -1,0 +1,9 @@
+.special{
+    color:red;
+}
+*{
+    margin-left: 20px;
+}
+.noSpecial{
+    color:blue
+}

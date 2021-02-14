@@ -1,0 +1,71 @@
+<!--
+
+Pipes are the features which is presnt in angular in order to provide the extra information or provide useful feature to normal varaibles
+
+Built-in pipes
+Custom Pipes
+-->
+
+<!--
+
+    Types of Built in Pipes
+    Currency Pipes
+    Date Pipe
+    Decimal Pipe
+    Json Pipe
+    Lowercase Pipe
+    UpperCase Pipe
+    Percent Pipe
+    Slice Pipe
+    Async Pipe
+
+-->
+
+<div>
+  {{ 12.34 | currency: "CAD" }}
+  <br />
+  <br />
+
+  {{ dateValue | date: "d/M/y" }}
+
+  <br />
+
+  <!--
+
+        minIntegerDigits.minFractionDigits-maxFractionDigits
+
+
+    -->
+
+  <p ngNonBindable>
+    {{ 3.14526 | number: "1.2-4" }}
+  </p>
+  {{ 98798669693.14526 | number: "1.2-4" }}
+  <br />
+  <br />
+
+  {{ "ANGULAR" | lowercase }}
+  {{ "angular" | uppercase }}
+  <br />
+  <br />
+  {{ 0.12678 | percent }}
+  <br />
+  <br />
+  {{ 0.32456 | percent: "2.1-2" }}
+
+  <br />
+  <br />
+
+  {{ jsonValue | json}}
+<br />
+  {{[1,2,3,4,5] | slice:1:3}}
+
+
+  <br />
+  <br />
+
+  {{6 | multiplier:'10'}}
+
+
+
+</div>
