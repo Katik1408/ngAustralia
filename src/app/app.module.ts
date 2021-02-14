@@ -11,6 +11,9 @@ import {HighlightDirective} from './custom-directives/highlight-directive';
 import { CustomifDirective } from './custom-directives/customif/customif.directive';
 import { PipesexampleComponent } from './pipesexample/pipesexample.component';
 import {MultiplerPipe} from './pipes/multiplier.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
+import { SiblingComponent } from './sibling/sibling.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {MultiplerPipe} from './pipes/multiplier.pipe';
     HighlightDirective,
     CustomifDirective,
     PipesexampleComponent,
-    MultiplerPipe
+    MultiplerPipe,
+    ParentComponent,
+    ChildComponent,
+    SiblingComponent
   ],
   imports: [
     BrowserModule,

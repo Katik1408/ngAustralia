@@ -1,0 +1,13 @@
+
+<div class="siblingDataBox">
+    <h2 style="border: 2px solid black;"  >
+            Sibling Component
+    </h2>
+    {{message}}
+
+    <input type="text" [(ngModel)] = "message" class="form-control">
+
+
+    <br /> <br />
+    <button class="btn btn-warning" (click)="newMessage()">Send Data to Other Component</button>
+</div>

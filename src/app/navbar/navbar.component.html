@@ -3,23 +3,32 @@
     Reactive forms are Synchronous
     Template driven forms are Async
 -->
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="#"
+        >Home <span class="sr-only">(current)</span></a
+      >
       <a class="nav-item nav-link" routerLink="/category">Category</a>
-      <a class="nav-item nav-link" routerLink="/login">Pricing</a>
-      <a class="nav-item nav-link disabled" href="/pipes">Pipes</a>
+      <a class="nav-item nav-link" routerLink="/login">Login</a>
+      <a class="nav-item nav-link" routerLink="/pipes">Pipes</a>
+      <a class="nav-item nav-link" routerLink="/parent">Parent</a>
+      <a class="nav-item nav-link" routerLink="/sibling">Sibling</a>
     </div>
   </div>
 </nav>
-
-
 
 <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
   <div class="container">
@@ -55,23 +64,23 @@
             id="pwd"
             class="form-control"
             [ngClass]="{ 'is-invalid': submitted && f.password.errors }" -->
-          <!-- /> -->
-          <!-- <div class="invalid-feedback" *ngIf="f.password.errors.required">
+<!-- /> -->
+<!-- <div class="invalid-feedback" *ngIf="f.password.errors.required">
             Password is required
           </div> -->
-          <!-- <div class="invalid-feedback" *ngIf="f.password.errors.minLength">
+<!-- <div class="invalid-feedback" *ngIf="f.password.errors.minLength">
             Minimun length of password should be 6
           </div>
           <div class="invalid-feedback" *ngIf="f.password.errors.maxLength">
             Maximum length of password should be 20
           </div> -->
-          <!--
+<!--
 
               *ngIf
               *ngFor
 
           -->
-        <!-- </div>
+<!-- </div>
       </div>
       <div class="row">
         <div class="col-md-12">

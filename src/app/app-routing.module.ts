@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoryComponent } from './category/category.component';
 import { NavComponent } from './nav/nav.component';
+import { ParentComponent } from './parent/parent.component';
 import { PipesexampleComponent } from './pipesexample/pipesexample.component';
+import { SiblingComponent } from './sibling/sibling.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,12 @@ const routes: Routes = [
   {
     path:'pipes',
     component:PipesexampleComponent
+  },{
+    path:'parent',
+    component:ParentComponent
+  },{
+    path:'sibling',
+    component:SiblingComponent
   }
 ];
 
