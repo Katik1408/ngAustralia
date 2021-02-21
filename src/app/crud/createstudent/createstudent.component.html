@@ -1,0 +1,39 @@
+<form #createStudent = "ngForm" (ngSubmit) = "submit(createStudent.value)" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          [(ngModel)]="student.Name"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input
+          type="number"
+          class="form-control"
+          name="age"
+          [(ngModel)]="student.Age"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input
+          type="text"
+          class="form-control"
+          name="place"
+          [(ngModel)]="student.Place"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="submit" class="btn btn-primary" />
+      </div>
+    </div>
+  </div>
+</form>

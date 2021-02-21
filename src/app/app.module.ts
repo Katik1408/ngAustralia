@@ -14,6 +14,10 @@ import {MultiplerPipe} from './pipes/multiplier.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { SiblingComponent } from './sibling/sibling.component';
+import { StudentdetailsComponent } from './crud/studentdetails/studentdetails.component';
+import {HttpClientModule} from '@angular/common/http';
+import { CreatestudentComponent } from './crud/createstudent/createstudent.component';
+import { EditstudentdetailsComponent } from './crud/editstudentdetails/editstudentdetails.component'
 
 @NgModule({
   declarations: [
@@ -27,13 +31,17 @@ import { SiblingComponent } from './sibling/sibling.component';
     MultiplerPipe,
     ParentComponent,
     ChildComponent,
-    SiblingComponent
+    SiblingComponent,
+    StudentdetailsComponent,
+    CreatestudentComponent,
+    EditstudentdetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

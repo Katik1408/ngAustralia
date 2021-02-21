@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Place</th>
+      <th>
+        Action
+      </th>
+    </tr>
+    <tr *ngFor="let student of students" >
+      <td> {{student.name}} </td>
+      <td> {{student.age}} </td>
+      <td> {{student.place}} </td>
+      <td>
+     <a (click) = "deleteStudent(student._id)">    <i class="fas fa-trash-alt"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+     <a>  <i class="fas fa-edit"></i></a>
+      </td>
+    </tr>
+  </table>
+</div>
