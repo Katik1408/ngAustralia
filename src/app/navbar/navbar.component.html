@@ -27,13 +27,22 @@
       <a class="nav-item nav-link" routerLink="/parent">Parent</a>
       <a class="nav-item nav-link" routerLink="/sibling">Sibling</a>
       <!-- crud/studentdetails -->
-      <a class="nav-item nav-link" routerLink="/crud/studentdetails">Students</a>
+      <a class="nav-item nav-link" routerLink="/crud/studentdetails"
+        >Students</a
+      >
       <!-- crud/createstudent -->
-      <a class="nav-item nav-link" routerLink="/crud/createstudent">Add new Student</a>
+      <a class="nav-item nav-link" routerLink="/crud/createstudent"
+        >Add new Student</a
+      >
+      <!-- lazy -->
+      <a class="nav-item nav-link" routerLink="/lazy">Lazy Module</a>
     </div>
   </div>
 </nav>
 
+<div *ngIf="progressBar.isLoading | async" style="z-index: 99;" >
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
 <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
   <div class="container">
     <div class="card spacer">

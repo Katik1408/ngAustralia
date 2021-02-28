@@ -1,38 +1,38 @@
 import { rendererTypeName } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class AppComponent {
   title = 'FirstApp';
   h: FormGroup;
   isSpecial = false;
 
-  condition = true
+  condition = true;
 
-  getColor(country){
-    switch(country){
+  getColor(country) {
+    switch (country) {
       case 'IN':
-        return "red";
+        return 'red';
       case 'US':
-        return "green"
+        return 'green';
       case 'FR':
-        return "blue"
-
+        return 'blue';
     }
   }
   people: any[] = [
     {
       name: 'Rahul',
       country: 'IN',
-      phone:{
-        mobile:'1234567',
-        landline:'123456'
-      }
+      phone: {
+        mobile: '1234567',
+        landline: '123456',
+      },
     },
     {
       name: 'Josh',
@@ -43,8 +43,8 @@ export class AppComponent {
       country: 'FR',
     },
     {
-      name:'Rohit',
-      country:'IN'
-    }
+      name: 'Rohit',
+      country: 'IN',
+    },
   ];
 }

@@ -16,7 +16,6 @@ export class SiblingComponent implements OnInit {
       this.message = data;
     });
   }
-
   newMessage(){
     this.dataService.changeMessage(this.message)
   }

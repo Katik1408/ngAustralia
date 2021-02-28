@@ -1,7 +1,14 @@
-.special{
-    color:red;
+.special {
+  color: red;
 }
 
-.noSpecial{
-    color:blue
+.noSpecial {
+  color: blue;
+}
+
+h1 {
+  color: white;
+  background-color: red;
+  text-transform: uppercase;
+  text-align: center;
 }

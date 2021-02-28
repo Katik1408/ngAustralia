@@ -17,7 +17,9 @@ import { SiblingComponent } from './sibling/sibling.component';
 import { StudentdetailsComponent } from './crud/studentdetails/studentdetails.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CreatestudentComponent } from './crud/createstudent/createstudent.component';
-import { EditstudentdetailsComponent } from './crud/editstudentdetails/editstudentdetails.component'
+import { EditstudentdetailsComponent } from './crud/editstudentdetails/editstudentdetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule  } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { EditstudentdetailsComponent } from './crud/editstudentdetails/editstude
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

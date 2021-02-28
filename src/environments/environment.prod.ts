@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: 'localhost:4000'
+  apiURL: 'https://ec2.aws.sessioncloud.com:4000'
 };
-apiURLOutside : 'localhost:3000'

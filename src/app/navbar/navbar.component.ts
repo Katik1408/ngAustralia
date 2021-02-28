@@ -5,7 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-
+import { ProgressBarService } from 'src/app/services/shared/progress-bar.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -15,7 +15,10 @@ export class NavbarComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    public progressBar: ProgressBarService
+  ) {}
 
   //FormBuilder
   ngOnInit(): void {
@@ -24,25 +27,17 @@ export class NavbarComponent implements OnInit {
       password: ['', [Validators.minLength(6), Validators.maxLength(20)]],
     });
 
-
-
-
     // this.loginForm = new FormGroup({
     //   emailid: new FormControl('', [Validators.required]),
     //   password: new FormControl('', [Validators.minLength(6), Validators.maxLength(8)]),
     // });
   }
 
-
-  
-  get f(){
-      return this.loginForm.controls;
+  get f() {
+    return this.loginForm.controls;
   }
 
-
   onSubmit(data) {
-
-
     console.log(this.loginForm.controls);
 
     this.submitted = true;

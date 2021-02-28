@@ -34,9 +34,14 @@ const routes: Routes = [
     component: StudentdetailsComponent,
   },
   {
-    path:'crud/createstudent',
-    component: CreatestudentComponent
-  }
+    path: 'crud/createstudent',
+    component: CreatestudentComponent,
+
+  },
+  {
+    path: 'lazy',
+    loadChildren: () => import('./lazy/lazy.module').then((m) => m.LazyModule),
+  },
 ];
 
 @NgModule({
