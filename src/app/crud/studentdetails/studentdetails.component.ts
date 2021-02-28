@@ -12,6 +12,7 @@ export class StudentdetailsComponent implements OnInit {
   constructor(private crudService: CrudService) {}
 
   ngOnInit(): void {
+    this.getJsonData();
     this.getAllStudent();
   }
 
@@ -30,5 +31,8 @@ export class StudentdetailsComponent implements OnInit {
       (data) => console.log(data),
       (err) => console.log(err)
     );
+  }
+  getJsonData() {
+    this.crudService.getAllJSONData().subscribe((data) => console.log(data));
   }
 }

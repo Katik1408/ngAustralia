@@ -10,8 +10,13 @@ import { Student } from 'src/app/models/student.model';
 export class CrudService {
   apiURL = environment.apiURL;
   STUDENTS = 'api/students';
+  jsonAPI = 'https://jsonplaceholder.typicode.com/todos/1';
 
   constructor(private httpClient: HttpClient) {}
+
+  getAllJSONData() {
+    return this.httpClient.get(this.jsonAPI);
+  }
 
   //HTTPGET
   //
