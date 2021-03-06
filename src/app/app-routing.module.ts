@@ -51,6 +51,9 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard],
+    children: [
+      {path:':id',component:StudentdetailsComponent}
+    ]
   },
 ];
 

@@ -1,6 +1,8 @@
-import { rendererTypeName } from '@angular/compiler';
-import { Component, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { BehaviorSubject, merge, Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +10,29 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private router: Router, private ar: ActivatedRoute) {}
+  products$;
+  id = 5;
+  
+
+  //4200/dashabord/5?search=5&another=default
+
+  ngOnInit(): void {
+    this.router.navigate(['/dashboard/', this.id], {
+      queryParams: { search: this.id,another : 'default' },
+      skipLocationChange : false
+    });
+  //  this.ar.paramMap.pipe(switchMap((param)=>{
+  //    this.id = param.get('id')
+  //    return this.products$;
+  //  }))
+  }
   title = 'FirstApp';
   h: FormGroup;
   isSpecial = false;
 
   condition = true;
-
   getColor(country) {
     switch (country) {
       case 'IN':

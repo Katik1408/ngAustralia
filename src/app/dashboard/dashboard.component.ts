@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   constructor() { }
-
+  public parent : string = 'parent';
+  id = 222;
   ngOnInit(): void {
   }
-
 }
